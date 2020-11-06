@@ -1,0 +1,9 @@
+MONGODB_URI=mongodb+srv://MONGODBATLAS_USER:MONGODBATLAS_PASSWORD@MONGODBATLAS_CLUSTER/MONGODBATLAS_DDBB?retryWrites=true&w=majority
+SESSION_KEY=secretSessionKey
+SMTP_SERVER=smtpserver.com
+SMTP_PORT=465
+SMTP_USER=email@smtpserver.com
+SMTP_PASSWORD=emailPassword
+
+
+### Rename this file to .env and delete this comment ###
