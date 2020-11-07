@@ -1,3 +1,15 @@
+// .env
+require('dotenv').config();
+
+// APM Integration
+if (process.env.APM_ACTIVATE == 'true') {
+  const apm = require('elastic-apm-node').start({
+    serviceName: process.env.APM_SERVICENAME,
+    serverUrl: process.env.APM_SERVERURL,
+  });
+  console.log('✅ APM integration activated');
+}
+
 // Dependencies
 const express = require('express');
 const helmet = require('helmet');
@@ -15,7 +27,6 @@ const morgan = require('morgan');
 
 // Initializations
 const app = express();
-require('dotenv').config();
 require('./database');
 require('./config/passport');
 

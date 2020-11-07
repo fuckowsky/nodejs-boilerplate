@@ -4,6 +4,8 @@ SMTP_SERVER=smtpserver.com
 SMTP_PORT=465
 SMTP_USER=email@smtpserver.com
 SMTP_PASSWORD=emailPassword
-
+APM_ACTIVATE=true
+APM_SERVICENAME=nodejs-boilerplate
+APM_SERVERURL=http://localhost:8200
 
 ### Rename this file to .env and delete this comment ###
