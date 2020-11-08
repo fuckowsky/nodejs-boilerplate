@@ -10,7 +10,7 @@ const { sendEmail, sendEmailHtml } = require('../helpers/mailsend.helper');
 const passport = require('passport');
 
 userController.viewSignup = (req, res) => {
-  res.render('signup');
+  res.render('user/signup');
 };
 
 userController.signup = async (req, res) => {
@@ -25,7 +25,7 @@ userController.signup = async (req, res) => {
     });
   }
   if (errors.length > 0) {
-    res.render('index', {
+    res.render('user/signup', {
       errors,
       name,
       email,
@@ -95,12 +95,12 @@ userController.verify = async (req, res) => {
 };
 
 userController.viewLogin = (req, res) => {
-  res.render('login');
+  res.render('user/login');
 };
 
 userController.login = passport.authenticate('local', {
   successRedirect: '/user/home',
-  failureRedirect: '/',
+  failureRedirect: '/user/login',
   failureFlash: true,
 });
 
@@ -111,7 +111,7 @@ userController.logout = (req, res) => {
 };
 
 userController.viewLostPassword = (req, res) => {
-  res.render('lostPassword');
+  res.render('user/lostPassword');
 };
 
 userController.doLostPassword = async (req, res) => {
@@ -138,7 +138,7 @@ userController.doLostPassword = async (req, res) => {
 };
 
 userController.viewUserHome = (req, res) => {
-  res.send('User Home View');
+  res.render('user/home');
 };
 
 module.exports = userController;
