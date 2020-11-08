@@ -1,17 +1,9 @@
 <% if ( error_msg.length > 0 ) { %>
-  <p>Error msg: <%= error_msg %> </p>
-<% } %>
-
-<% if ( success_msg.length > 0 ) { %>
-  <p>Success msg: <%= success_msg %> </p>
-<% } %>
-
-<% if ( error.length > 0 ) { %>
-  <p>Error: <%= error %> </p>
-<% } %>
-
-<% if ( locals.errors ) { %>
-  <% errors.forEach(function(error){ %>
-    <p>Errors array: <%= error.text %> </p>
-  <% }); %>
-<% } %>
+<p>Error msg: <%= error_msg %></p>
+<% } %> <% if ( success_msg.length > 0 ) { %>
+<p>Success msg: <%= success_msg %></p>
+<% } %> <% if ( error.length > 0 ) { %>
+<p>Error: <%= error %></p>
+<% } %> <% if ( locals.errors ) { %> <% errors.forEach(function(error){ %>
+<p>Errors array: <%= error.text %></p>
+<% }); %> <% } %>

@@ -1,19 +1,25 @@
 <form action="/user/signup" method="post">
-    <div class="container">
-      <label><b>Nombre</b></label>
-      <input type="text" placeholder="Nombre" value="<%= locals.name ? locals.name : '' %>" name="name" required>
+  <div class="container">
+    <label><b>Nombre</b></label>
+    <input type="text" placeholder="Nombre" value="<%= locals.name ? locals.name : '' %>" name="name" required />
 
-      <label><b>Email</b></label>
-      <input type="text" placeholder="mi@email.com" value="<%= locals.email ? locals.email : '' %>" name="email" required>
+    <label><b>Email</b></label>
+    <input
+      type="text"
+      placeholder="mi@email.com"
+      value="<%= locals.email ? locals.email : '' %>"
+      name="email"
+      required
+    />
 
-      <label><b>Contraseña</b></label>
-      <input type="password" placeholder="Contraseña" name="password" required>
-  
-      <label><b>Repetir contraseña</b></label>
-      <input type="password" placeholder="Contraseña" name="confirm_password" required>
+    <label><b>Contraseña</b></label>
+    <input type="password" placeholder="Contraseña" name="password" required />
 
-      <button type="submit">Enviar</button>
-    </div>
-</form> 
+    <label><b>Repetir contraseña</b></label>
+    <input type="password" placeholder="Contraseña" name="confirm_password" required />
+
+    <button type="submit">Enviar</button>
+  </div>
+</form>
 
 <%- include('../partials/messages') %>
