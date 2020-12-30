@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-// Controller
+// Controllers
 const {
   viewSignup,
   signup,
